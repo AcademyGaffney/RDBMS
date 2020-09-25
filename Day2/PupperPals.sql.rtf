@@ -27,10 +27,17 @@ CREATE TABLE `pupper` (\
   `date_of_birth` date DEFAULT NULL,\
   `breed_id` int(11) DEFAULT NULL,\
   PRIMARY KEY (`id`),\
-  KEY `breed_id` (`breed_id`),\
   CONSTRAINT `pupper_ibfk_1` FOREIGN KEY (`breed_id`) REFERENCES `breed` (`id`)\
 )\
 \
-INSERT INTO `breed` VALUES (1,'Boxer','Alert, patient, playful, wary of strangers','Short, shiny, smooth, and tight'),(2,'Bichon Frise','Cheerful, gentle, affectionate','Soft undercoat; coarse, curley outercoat'),(3,'Siberian Husky','Friendly, gentle, alert, outgoing','Double, medium length');\
+INSERT INTO `breed` \
+VALUES (1,'Boxer','Alert, patient, playful, wary of strangers','Short, shiny, smooth, and tight'),\
+(2,'Bichon Frise','Cheerful, gentle, affectionate','Soft undercoat; coarse, curley outercoat'),\
+(3,'Siberian Husky','Friendly, gentle, alert, outgoing','Double, medium length');\
 \
-INSERT INTO `pupper` VALUES (1,'Lexi','F',58.0,22.0,'Brown with Black','2013-04-18',1),(2,'Bruno','M',12.0,12.0,'White','2017-04-10',2),(3,'Socks','F',45.0,25.0,'Grey and WHite','2018-09-08',3),(4,'Spike','m',10.0,11.0,'White','2016-03-28',2),(5,'Ali','M',62.0,23.0,'Brown with white','2015-08-12',1);}
+INSERT INTO `pupper` VALUES \
+(1,'Lexi','F',58.0,22.0,'Brown with Black','2013-04-18',1),\
+(2,'Bruno','M',12.0,12.0,'White','2017-04-10',2),\
+(3,'Socks','F',45.0,25.0,'Grey and WHite','2018-09-08',3),\
+(4,'Spike','m',10.0,11.0,'White','2016-03-28',2),\
+(5,'Ali','M',62.0,23.0,'Brown with white','2015-08-12',1);}
